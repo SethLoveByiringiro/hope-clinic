@@ -32,7 +32,7 @@ export default function AppointmentPage() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative h-96 flex items-center">
+      <section className="relative h-64 sm:h-80 lg:h-96 flex items-center">
         {/* Background Image with Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -46,8 +46,8 @@ export default function AppointmentPage() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-white">
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Book Appointment</h1>
-            <nav className="text-sm">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">Book Appointment</h1>
+            <nav className="text-xs sm:text-sm">
               <span className="text-teal-200">HOME</span>
               <span className="mx-2">&gt;</span>
               <span className="text-white">BOOK APPOINTMENT</span>
@@ -57,13 +57,13 @@ export default function AppointmentPage() {
       </section>
 
       {/* Appointment Form Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 lg:py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Schedule Your <span className="text-teal-600">Appointment</span>
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
               Take the first step towards better mental health. Schedule your appointment with our experienced professionals.
             </p>
           </div>
@@ -111,7 +111,7 @@ export default function AppointmentPage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-900 mb-2">
                       First Name *
                     </label>
                     <input
@@ -120,12 +120,13 @@ export default function AppointmentPage() {
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium placeholder-gray-500"
+                      placeholder="Enter your first name"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-900 mb-2">
                       Last Name *
                     </label>
                     <input
@@ -134,7 +135,8 @@ export default function AppointmentPage() {
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium placeholder-gray-500"
+                      placeholder="Enter your last name"
                       required
                     />
                   </div>
@@ -142,7 +144,7 @@ export default function AppointmentPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-900 mb-2">
                       Email Address *
                     </label>
                     <input
@@ -151,12 +153,13 @@ export default function AppointmentPage() {
                       name="email"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium placeholder-gray-500"
+                      placeholder="Enter your email address"
                       required
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-900 mb-2">
                       Phone Number *
                     </label>
                     <input
@@ -165,14 +168,15 @@ export default function AppointmentPage() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium placeholder-gray-500"
+                      placeholder="Enter your phone number"
                       required
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="service" className="block text-sm font-medium text-gray-900 mb-2">
                     Service Needed *
                   </label>
                   <select
@@ -180,24 +184,24 @@ export default function AppointmentPage() {
                     name="service"
                     value={formData.service}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium"
                     required
                   >
-                    <option value="">Select a Service</option>
-                    <option value="diagnostic">Diagnostic Assessments</option>
-                    <option value="treatment">Treatment Plan & Medication Management</option>
-                    <option value="consultations">Clinical & Forensic Consultations</option>
-                    <option value="individual">Individual Therapy</option>
-                    <option value="group">Intensive Outpatient Group Therapy</option>
-                    <option value="education">Psycho-Education</option>
-                    <option value="domestic">Misdemeanor Domestic Violence Offender Treatment</option>
-                    <option value="dui">DUI (Screening, Education, & Treatment)</option>
+                    <option value="" className="text-gray-500">Select a Service</option>
+                    <option value="diagnostic" className="text-gray-900">Diagnostic Assessments</option>
+                    <option value="treatment" className="text-gray-900">Treatment Plan & Medication Management</option>
+                    <option value="consultations" className="text-gray-900">Clinical & Forensic Consultations</option>
+                    <option value="individual" className="text-gray-900">Individual Therapy</option>
+                    <option value="group" className="text-gray-900">Intensive Outpatient Group Therapy</option>
+                    <option value="education" className="text-gray-900">Psycho-Education</option>
+                    <option value="domestic" className="text-gray-900">Misdemeanor Domestic Violence Offender Treatment</option>
+                    <option value="dui" className="text-gray-900">DUI (Screening, Education, & Treatment)</option>
                   </select>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-900 mb-2">
                       Preferred Date
                     </label>
                     <input
@@ -206,11 +210,11 @@ export default function AppointmentPage() {
                       name="preferredDate"
                       value={formData.preferredDate}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium"
                     />
                   </div>
                   <div>
-                    <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="preferredTime" className="block text-sm font-medium text-gray-900 mb-2">
                       Preferred Time
                     </label>
                     <select
@@ -218,18 +222,18 @@ export default function AppointmentPage() {
                       name="preferredTime"
                       value={formData.preferredTime}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium"
                     >
-                      <option value="">Select Time</option>
-                      <option value="morning">Morning (8:00 AM - 12:00 PM)</option>
-                      <option value="afternoon">Afternoon (12:00 PM - 5:00 PM)</option>
-                      <option value="evening">Evening (5:00 PM - 9:00 PM)</option>
+                      <option value="" className="text-gray-500">Select Time</option>
+                      <option value="morning" className="text-gray-900">Morning (8:00 AM - 12:00 PM)</option>
+                      <option value="afternoon" className="text-gray-900">Afternoon (12:00 PM - 5:00 PM)</option>
+                      <option value="evening" className="text-gray-900">Evening (5:00 PM - 9:00 PM)</option>
                     </select>
                   </div>
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-900 mb-2">
                     Additional Information
                   </label>
                   <textarea
@@ -239,13 +243,13 @@ export default function AppointmentPage() {
                     placeholder="Please provide any additional information about your needs or concerns..."
                     value={formData.message}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
+                    className="w-full px-4 py-3 border-2 border-teal-200 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-teal-500 bg-white text-gray-900 font-medium placeholder-gray-500"
                   />
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full bg-green-500 text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-600 transition-colors"
+                  className="w-full bg-green-500 text-white py-4 px-6 rounded-lg font-semibold hover:bg-green-600 hover:scale-105 transition-all duration-300 text-lg shadow-lg hover:shadow-xl"
                 >
                   BOOK APPOINTMENT
                 </button>
