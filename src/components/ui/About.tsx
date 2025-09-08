@@ -3,16 +3,16 @@ import { Check } from 'lucide-react';
 
 const About = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-12 sm:py-16 lg:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 sm:mb-6">
                 About Hope Integrated Clinic
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
                 AT HOPE INTEGRATED CLINIC, we believe that healthy individuals are the foundation of healthy communities. We are a team of dedicated professionals committed to fostering and promoting mental and behavioral wellbeing. We offer a full spectrum of outpatient mental health and substance abuse services, working to make essential care both accessible and effective.
               </p>
             </div>
@@ -71,9 +71,9 @@ const About = () => {
           </div>
           
           {/* Right Content - Images */}
-          <div className="space-y-6">
+          <div className="space-y-4 sm:space-y-6">
             {/* Group Therapy Image */}
-            <div className="w-full h-64 rounded-lg overflow-hidden">
+            <div className="w-full h-48 sm:h-56 lg:h-64 rounded-lg overflow-hidden">
               <img 
                 src="/IMG-20250904-WA0006.jpg" 
                 alt="Group Therapy Session" 
@@ -82,15 +82,15 @@ const About = () => {
             </div>
             
             {/* Bottom Row */}
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4">
               {/* Experience Card */}
-              <div className="bg-teal-600 text-white p-6 rounded-lg text-center">
-                <div className="text-3xl font-bold">+10</div>
-                <div className="text-sm">Years Experience</div>
+              <div className="bg-teal-600 text-white p-4 sm:p-6 rounded-lg text-center">
+                <div className="text-2xl sm:text-3xl font-bold">+10</div>
+                <div className="text-xs sm:text-sm">Years Experience</div>
               </div>
               
               {/* Individual Session Image */}
-              <div className="w-full h-32 rounded-lg overflow-hidden">
+              <div className="w-full h-24 sm:h-28 lg:h-32 rounded-lg overflow-hidden">
                 <img 
                   src="/IMG-20250904-WA0004.jpg" 
                   alt="Individual Therapy Session" 

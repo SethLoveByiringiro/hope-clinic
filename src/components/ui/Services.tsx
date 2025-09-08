@@ -46,18 +46,18 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 sm:py-16 lg:py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="bg-green-600 text-white p-8 rounded-lg mb-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <div className="bg-green-600 text-white p-6 sm:p-8 rounded-lg mb-8 sm:mb-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4">
                 Our Best Services For Your Solution
               </h2>
             </div>
             <div>
-              <p className="text-green-100 text-lg">
+              <p className="text-green-100 text-base sm:text-lg leading-relaxed">
                 We provide a full range of outpatient mental health and substance abuse services, from the least to the most intensive. We serve adults who need support, evaluations, and counseling for various mental illnesses and substance abuse issues.
               </p>
             </div>
@@ -65,19 +65,19 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <div 
               key={index} 
-              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group"
+              className="bg-white p-4 sm:p-6 rounded-lg shadow-sm hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer group"
             >
-              <div className="text-teal-600 mb-4 group-hover:text-teal-700 transition-colors duration-300">
+              <div className="text-teal-600 mb-3 sm:mb-4 group-hover:text-teal-700 transition-colors duration-300">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-semibold text-gray-900 mb-3 group-hover:text-teal-600 transition-colors duration-300">
+              <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2 sm:mb-3 group-hover:text-teal-600 transition-colors duration-300">
                 {service.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+              <p className="text-gray-600 text-xs sm:text-sm leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
                 {service.description}
               </p>
             </div>
